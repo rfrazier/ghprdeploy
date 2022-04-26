@@ -5,7 +5,7 @@ on: pull_request
 
 env:
   resourceGroupName: pr_${{ github.event.number }}
-  resourceGroupLocation: westus3
+  resourceGroupLocation: westus
 
 jobs:
   lint:
@@ -38,4 +38,3 @@ jobs:
       - name: Show website hostname
         run: |
           echo "Access the website at this address: https://${{ steps.deploy.outputs.appServiceAppHostName }}"
-          
